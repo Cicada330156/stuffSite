@@ -1,7 +1,125 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<style>
+			.title {
+				color:white
+			}
+
+			.hide-Button {
+				display: block;
+				position: relative;
+				bottom: 20px;
+				margin-left: 6px;
+				margin-top: 0;
+				margin-right: auto;
+				font-size: 12px;
+				border-radius: 12px;
+				color: #000000;
+				border: 2px solid #000000;
+				background-color: #FFCC00;
+				text-align: left;
+				font-weight: bold;
+				opacity: 0.9;
+
+				margin: 0;
+				padding: 1px 6px;
+				align-items: flex-start;
+
+				padding-top: 1px;
+				padding-left: 1px;
+				padding-right: 1px;
+				padding-bottom: 5px;
+			}
+			.hide-Button:hover {
+				background-color: #FFE786;
+				color: #000000;
+			}
+
+			.category {
+				text-align: center;
+				padding-top: 1px;
+				padding-left: 1px;
+				padding-right: 1px;
+				padding-bottom: 5px;
+				background-color: #222222;
+				border-style: ridge; 
+				border-color: #FFCC00;
+				border-radius: 25px;
+				width: 500px; 
+				max-width: 500px;
+				margin:0 auto;
+				margin-bottom: 15px;
+				
+				margin: 0;
+				padding-inline-start: 0;
+				color: #FFCC00;
+				background-color: #323232;
+				margin: 0;
+				display:block;
+			}
+
+			.category-title {
+				color: #FF6699 !important;
+				font-size: 25px;
+				font-weight: bold;
+				margin: 4px 0 -25px 0;
+			}
+		</style>
 	</head>
 	<body>
+		<div id='title' style='background:green; background-image:url("vecteezy_abstract-army-camouflage-seamless-pattern_.jpg"); background-size: 50%'>
+			<h1 align='center' class='title'>THE IRAQI INVASION OF KUWAIT</h1>
+			<h3 align='center' class='title'>Operations Desert Shield and Desert Storm</h3>
+		</div>
+		
+		
+		<div id='background' style='background:rgb(237, 219, 154)'>
+			<div id='bgtitle' style='background:rgb(255, 230, 140)'>
+				<h2 align='center' class='title'>CONFLICT BACKGROUND</h1>
+			</div>
+			
+			<h2>Iraqi Invasion</h2>
+			<p>Kuwait is a small country on the persian gulf, between Saudi Arabia and Iraq. Iraq invaded Kuwait August, 1990</p>
+			<h2>U.S. Involvement</h2>
+		</div>
+		
+		
+		<script>
+			function hideSources () {
+				document.getElementById("sources Content").style.display = "none";
+				document.getElementById("sources Hide Button").setAttribute("onclick", "showSources()");
+				document.getElementById("sources Hide Button").innerHTML = "Show &#xbb;"
+			}
+			function showSources (whichDiv) {
+				document.getElementById("sources Content").style.removeProperty("display");
+				document.getElementById("sources Hide Button").setAttribute("onclick", "hideSources()");
+				document.getElementById("sources Hide Button").innerHTML = "Hide &#xab;"
+			}
+		</script>
+		<div id="sources" class='category'>
+			<h3 class="category-title">sources</h3>
+			<button align='left' onclick="showSources()" id="sources Hide Button" class='hide-Button'>Show &#xbb</button>
+			<ul id="sources Content" style='padding:0; display:none;'>
+				<h3>Information Sources</h3>
+				<ul style='padding:0'>
+
+					<!--<a href=''></a>-->
+					<a href='https://www.britannica.com/event/Persian-Gulf-War'>britanica</a><br>
+					<a href='https://www.khanacademy.org/humanities/us-history/modern-us/1990s-america/a/the-gulf-war#:~:text=In%20August%201990%2C%20Iraq%20invaded,from%20Kuwait%2C%20but%20Hussein%20refused.'>khan academy</a><br>
+					<a href='https://www.history.com/this-day-in-history/iraq-invades-kuwait'>history.com</a><br>
+				</ul>
+				<br>
+				<h3>Content Sources</h3>
+				<ul style='padding:0'>
+					<a href='https://www.vecteezy.com/vector-art/4733679-abstract-army-camouflage-seamless-pattern'>Camo pattern</a>
+				</ul>
+			</ul>
+		</div>
+		
+		<p align='center'>Some images sourced from <a href='https://vecteezy.com' target='_blank'>vecteezy</a>.</p>
 	</body>
+	<script>
+		
+	</script>
 </html>
